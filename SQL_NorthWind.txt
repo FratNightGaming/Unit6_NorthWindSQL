@@ -1,0 +1,44 @@
+SQL With Northwind
+
+1. Select * From Customers
+2. Select distinct Country From Customers;
+3. 
+Select * From Customers 
+Where CustomerID Like 'BL%';
+4. 
+Select Top 100 * From Orders; --Select * From Order Limit 100 does NOT work
+5. 
+Select * From Customers
+Where PostalCode in ('1010', '3012', '12209', '05023');
+6. 
+Select * From Orders
+Where ShipRegion is not null;
+7. 
+Select * From Customers
+Order by Country, City;
+8. 
+Insert into Customers
+Values ('FNG', 'Grand Circus', 'Jake Berger', 'Novice Coder',  '1115 Knollwood Rd', 'Deerfield', 'Midwest', '60015', 'US', '8479759180', '123456789');
+9. 
+Update Orders
+Set ShipRegion = 'EuroZone' 
+Where ShipCountry = 'France';
+10.
+Delete from [Order Details]
+Where Quantity = 1;
+11. 
+Select CustomerID from Orders
+Where OrderID = '10290';
+12. 
+Select Customers.CustomerID, Orders.CustomerID
+From Customers
+Full Outer Join Orders on Customers.CustomerID = Orders.CustomerID;
+--I still dont understand joins
+13. 
+Select FirstName From Employees
+Where ReportsTo Is Null;
+14. 
+Select FirstName From Employees
+Where ReportsTo = 2;
+--Is there a way to use the word Andrew in the solution?
+
